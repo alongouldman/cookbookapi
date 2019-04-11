@@ -2,9 +2,10 @@ from .models import Ingredient, Recipe
 import json
 
 def add_recipe(payload):
-	recipe = Recipe(ingredients=json.loads(payload['ingredients']))
-	recipes = Recipe.objects.all().values('ingredients')
-	Ingredient.objects.filter(name__in=['egg', 'bacon', 'tomato']).distinct('name')
+	# recipe = Recipe(ingredients=json.loads(payload['ingredients']))
+	# recipes = Recipe.objects.all().values('ingredients')
+	# Ingredient.objects.filter(name__in=['egg', 'bacon', 'tomato']).distinct('name')
+	pass
 
 
 
