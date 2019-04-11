@@ -23,7 +23,6 @@ class RecipeSerializer(serializers.Serializer):
     image = Base64ImageField(required=True)
     ingredients = serializers.ListField(required=True)
     description = serializers.CharField(required=True)
-    date_created = serializers.DateTimeField(required=True)
 
     def create(self, validated_data):
         pass
