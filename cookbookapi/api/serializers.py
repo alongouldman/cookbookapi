@@ -17,12 +17,11 @@ class RecipeSerializer(serializers.ModelSerializer):
 
 
 class IngredientSerializer(serializers.Serializer):
+    name = serializers.CharField(required=True)
+
     def create(self, validated_data):
         pass
 
     def update(self, instance, validated_data):
         pass
 
-    class Meta:
-        model = serializers.ListField(serializers.DictField(['name', 'amount', 'unit']))
-        fields = ('id', 'url', 'name')

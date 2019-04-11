@@ -12,6 +12,7 @@ class Ingredient(models.Model):
     name = models.CharField(max_length=200)
 
 
+
 class Recipe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=32)
