@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b29a0767-93ef-4ac2-a8e4-7ff0e06c09a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cookbookapi/api/migrations/0006_auto_20190411_1749.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/cookbookapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cookbookapi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -218,7 +219,7 @@
       <option name="presentableId" value="Default" />
       <updated>1554977808529</updated>
       <workItem from="1554989612186" duration="3482000" />
-      <workItem from="1554994118983" duration="802000" />
+      <workItem from="1554994118983" duration="1327000" />
     </task>
     <task id="LOCAL-00001" summary="added new users">
       <created>1554981300966</created>
@@ -238,7 +239,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4284000" />
+    <option name="totallyTimeSpent" value="4809000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="697" extended-state="6" />
