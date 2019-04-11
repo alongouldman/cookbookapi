@@ -3,6 +3,7 @@ from rest_framework import serializers
 from .models import Recipe
 from .models import Ingredient
 
+
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
