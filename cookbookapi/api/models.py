@@ -5,21 +5,17 @@ from datetime import datetime
 
 
 def get_image_path(instance, filename):
-    return os.path.join('photos', str(instance.id), filename)
+	return os.path.join('photos', str(instance.id), filename)
 
 
 class Ingredient(models.Model):
-    name = models.CharField(max_length=200)
-
+	name = models.CharField(max_length=200)
 
 
 class Recipe(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=32)
-    image = models.ImageField(upload_to=get_image_path, blank=True, null=True)
-    ingredients = models.ManyToManyField(Ingredient)
-    description = models.CharField(max_length=200, default='')
-    date_created = models.DateTimeField(default=datetime.now)
-
-
-
+	user = models.ForeignKey(User, on_delete=models.CASCADE)
+	title = models.CharField(max_length=32)
+	image = models.ImageField(upload_to=get_image_path, blank=True, null=True)
+	ingredients = models.ManyToManyField(Ingredient)
+	description = models.CharField(max_length=200, default='')
+	date_created = models.DateTimeField(default=datetime.now)
