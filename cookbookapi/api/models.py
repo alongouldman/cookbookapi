@@ -11,6 +11,9 @@ def get_image_path(instance, filename):
 class Ingredient(models.Model):
 	name = models.CharField(max_length=200)
 
+	def __str__(self):
+		return self.name
+
 
 class Recipe(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
