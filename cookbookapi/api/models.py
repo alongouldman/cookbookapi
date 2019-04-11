@@ -4,7 +4,6 @@ import os
 from datetime import datetime
 
 
-
 def get_image_path(instance, filename):
     return os.path.join('photos', str(instance.id), filename)
 
@@ -17,9 +16,9 @@ class Recipe(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=32)
     image = models.ImageField(upload_to=get_image_path, blank=True, null=True)
-    Ingredients = models.ManyToManyField(Ingredient)
+    ingredients = models.ManyToManyField(Ingredient)
     description = models.CharField(max_length=200, default='')
-    date_created = models.DateTimeField( default=datetime.now)
+    date_created = models.DateTimeField(default=datetime.now)
 
 
 
