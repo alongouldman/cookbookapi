@@ -16,3 +16,5 @@ for lst in your_list:
 					 vitamin_B3=float(lst[10]), vitamin_B6=float(lst[11]), sodium=float(lst[12]),
 					 phosphorus=float(lst[13]), magnesium=float(lst[14]), iron=float(lst[15]), calcium=float(lst[16]), potassium=float(lst[17]), nutritional_fiber=float(lst[18]))
 	ing.save()
+
+Ingredient.objects.filter(type=None).delete()
