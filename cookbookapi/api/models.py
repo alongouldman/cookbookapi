@@ -41,3 +41,4 @@ class Recipe(models.Model):
 	overall_time = models.IntegerField()
 	tags = models.CharField(max_length=5000, null=True)
 	date_created = models.DateTimeField(default=datetime.now)
+	rate = models.FloatField(default=0)

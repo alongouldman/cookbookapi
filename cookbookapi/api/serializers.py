@@ -25,6 +25,7 @@ class RecipeSerializer(serializers.Serializer):
     tags = serializers.ListField(required=True)
     instructions = serializers.CharField(required=True)
     overall_time = serializers.IntegerField(required=True)
+    rate = serializers.FloatField(required=False)
 
     def create(self, validated_data):
         pass
