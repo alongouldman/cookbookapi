@@ -34,9 +34,10 @@ class Ingredient(models.Model):
 
 
 class Recipe(models.Model):
-	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	title = models.CharField(max_length=32)
 	image = models.CharField(max_length=50000000, null=True)
 	ingredients = models.CharField(max_length=5000, null=True)
-	description = models.CharField(max_length=200, null=True, default='')
+	instructions = models.CharField(max_length=200, null=True, default='')
+	overall_time = models.IntegerField()
+	tags = models.CharField(max_length=5000, null=True)
 	date_created = models.DateTimeField(default=datetime.now)

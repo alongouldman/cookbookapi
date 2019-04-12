@@ -20,9 +20,11 @@ class RecipeSerializer(serializers.ModelSerializer):
 
 class RecipeSerializer(serializers.Serializer):
     title = serializers.CharField(required=True)
-    image = Base64ImageField(required=True)
+    image = serializers.CharField(required=False)
     ingredients = serializers.ListField(required=True)
-    description = serializers.CharField(required=True)
+    tags = serializers.ListField(required=True)
+    instructions = serializers.CharField(required=True)
+    overall_time = serializers.IntegerField(required=True)
 
     def create(self, validated_data):
         pass

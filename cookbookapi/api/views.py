@@ -11,17 +11,19 @@ from .models import Ingredient
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from cookbookapi.api import ingredient_api, recipes_api
-
+import json
 
 class RecipeList(APIView):
 	def get(self, request):
-		recipes = Recipe.objects.all().values()
+		recipes = list(Recipe.objects.all().values())
+		for recipe in recipes:
+			recipe['tags'] = json.loads(recipe['tags']) if recipe['tags'] is not None else None
+			recipe['ingredients'] = json.loads(recipe['ingredients']) if recipe['ingredients'] is not None else None
 		return Response(recipes)
 
 	def post(self, request):
 		recipe = RecipeSerializer(data=request.data)
 		if recipe.is_valid():
-			recipe.save()
 			recipes_api.add_recipe(request.data)
 			return Response(recipe.data, status=status.HTTP_201_CREATED)
 		return Response(recipe.errors, status=status.HTTP_400_BAD_REQUEST)
