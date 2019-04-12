@@ -13,6 +13,7 @@ from rest_framework.response import Response
 from cookbookapi.api import ingredient_api, recipes_api
 import json
 
+
 class RecipeList(APIView):
 	def get(self, request):
 		recipes = list(Recipe.objects.all().values())
